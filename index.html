@@ -1,93 +1,193 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>СВОЙ МАСТЕР</title>
 
 <style>
+
 body{
 margin:0;
-background:#0b1220;
+padding:20px;
+background:#06101d;
 font-family:Arial,sans-serif;
 color:white;
 text-align:center;
-padding:15px;
 }
 
-img{
+.poster{
 width:100%;
-max-width:460px;
-border-radius:18px;
-box-shadow:0 12px 40px rgba(0,0,0,.45);
+max-width:760px;
+border-radius:28px;
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+margin-bottom:25px;
 }
 
 h1{
+font-size:64px;
+margin:10px 0;
 color:#59ff59;
-margin:18px 0 8px;
+font-weight:900;
+}
+
+.subtitle{
 font-size:32px;
+line-height:1.5;
+color:#ffffff;
+margin-bottom:35px;
 }
 
-p{
-color:#d8ffd8;
-font-size:17px;
-line-height:1.45;
-}
-
-a{
+.green-btn{
 display:block;
-margin:12px auto;
-padding:16px;
-border-radius:14px;
+width:100%;
+max-width:620px;
+margin:0 auto 24px;
+padding:28px;
+background:#57e83f;
+border-radius:26px;
+font-size:34px;
+font-weight:900;
 text-decoration:none;
-font-weight:bold;
-max-width:340px;
-font-size:18px;
+color:#041104;
+box-shadow:0 10px 30px rgba(87,232,63,.35);
 }
 
-.green{
-background:#49e649;
-color:#061006;
-}
-
-.dark{
-background:#1d2b45;
+.call-btn{
+display:block;
+width:100%;
+max-width:620px;
+margin:0 auto 30px;
+padding:26px;
+background:#16243f;
+border:2px solid #27446c;
+border-radius:26px;
+font-size:34px;
+font-weight:800;
+text-decoration:none;
 color:white;
-border:1px solid #355071;
 }
+
+.socials{
+display:flex;
+justify-content:center;
+gap:22px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.social-btn{
+width:180px;
+height:180px;
+background:#13213a;
+border:2px solid #2a4770;
+border-radius:32px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+transition:.2s;
+}
+
+.social-btn:hover{
+transform:translateY(-6px);
+background:#1b3152;
+}
+
+.social-btn img{
+width:78px;
+height:78px;
+margin-bottom:16px;
+}
+
+.social-btn span{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+@media(max-width:768px){
+
+body{
+padding:14px;
+}
+
+h1{
+font-size:44px;
+}
+
+.subtitle{
+font-size:24px;
+}
+
+.green-btn,
+.call-btn{
+font-size:26px;
+padding:22px;
+}
+
+.social-btn{
+width:120px;
+height:120px;
+border-radius:24px;
+}
+
+.social-btn img{
+width:52px;
+height:52px;
+margin-bottom:10px;
+}
+
+.social-btn span{
+font-size:20px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<img src="poster.png">
+<img src="poster.png" class="poster">
 
 <h1>СВОЙ МАСТЕР</h1>
 
-<p>
+<div class="subtitle">
 Инженерные системы под ключ.<br>
 Отопление • Водоснабжение • Канализация
-</p>
+</div>
 
-<a class="green" href="contact.vcf">
+<a class="green-btn" href="contact.vcf">
 ➕ Добавить контакт
 </a>
 
-<a class="dark" href="tel:+79244325000">
+<a class="call-btn" href="tel:+79244325000">
 📞 Позвонить
 </a>
 
-<a class="dark" href="https://t.me/Svoj_mastervl">
-✈️ Написать в Telegram
+<div class="socials">
+
+<a href="https://t.me/Svoj_mastervl" class="social-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+<span>Telegram</span>
 </a>
 
-<a class="dark" href="https://wa.me/79244325000">
-💬 Написать в WhatsApp
+<a href="https://wa.me/79244325000" class="social-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<span>WhatsApp</span>
 </a>
 
-<a class="dark" href="https://max.ru/Svoj_mastervl">
-⚡ Написать в Max
+<a href="https://max.ru/Svoj_mastervl" class="social-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png">
+<span>Max</span>
 </a>
+
+</div>
 
 </body>
 </html>
