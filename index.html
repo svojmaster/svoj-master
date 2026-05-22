@@ -1,14 +1,11 @@
 <!doctype html>
 <html lang="ru">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>СВОЙ МАСТЕР</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -17,355 +14,192 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,sans-serif;
-background:#07111d;
+background:#06101d;
 color:white;
-}
-
-.hero{
-padding:70px 20px;
 text-align:center;
-background:linear-gradient(180deg,#07111d,#10203a);
 }
 
-.logo{
-width:180px;
-height:180px;
-border-radius:50%;
-margin:0 auto 25px;
-background:#13213a;
-border:3px solid #315177;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:38px;
-font-weight:900;
-color:#59ff59;
-box-shadow:0 15px 40px rgba(0,0,0,.35);
+.wrapper{
+max-width:760px;
+margin:0 auto;
+padding:18px;
+}
+
+.poster{
+width:100%;
+border-radius:28px;
+box-shadow:0 20px 60px rgba(0,0,0,.55);
+margin-bottom:26px;
+}
+
+.card{
+background:linear-gradient(180deg,#10203a,#081421);
+border:1px solid #244466;
+border-radius:32px;
+padding:28px 18px;
+box-shadow:0 18px 50px rgba(0,0,0,.45);
 }
 
 h1{
-font-size:64px;
-font-weight:900;
+font-size:48px;
 color:#59ff59;
-margin-bottom:12px;
+font-weight:900;
+margin-bottom:10px;
 }
 
 .subtitle{
-font-size:28px;
-line-height:1.5;
-color:#d8ffd8;
-margin-bottom:40px;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:20px 34px;
-border-radius:20px;
-text-decoration:none;
 font-size:22px;
-font-weight:800;
-transition:.2s;
+line-height:1.45;
+color:#d8ffd8;
+margin-bottom:26px;
+}
+
+.main-btn{
+display:block;
+margin:14px auto;
+padding:20px;
+border-radius:22px;
+max-width:520px;
+text-decoration:none;
+font-size:24px;
+font-weight:900;
 }
 
 .green{
 background:#59ff59;
 color:#041104;
+box-shadow:0 10px 30px rgba(89,255,89,.28);
 }
 
 .dark{
-background:#13213a;
-border:1px solid #315177;
+background:#16243f;
+border:1px solid #345577;
 color:white;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-}
-
-.section{
-padding:80px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.section-title{
-font-size:46px;
-color:#59ff59;
-text-align:center;
-margin-bottom:45px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:22px;
-}
-
-.service{
-background:#13213a;
-padding:28px;
-border-radius:24px;
-border:1px solid #2d4f72;
-font-size:22px;
-font-weight:700;
-box-shadow:0 12px 30px rgba(0,0,0,.25);
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:24px;
-}
-
-.card{
-background:#122035;
-padding:30px;
-border-radius:26px;
-border:1px solid #294667;
-}
-
-.card h3{
-color:#59ff59;
-font-size:28px;
-margin-bottom:18px;
-}
-
-.card p{
-font-size:19px;
-line-height:1.6;
-color:#d7e4f4;
-}
-
-.contacts{
-padding:80px 20px;
-text-align:center;
-background:#0c1728;
-}
-
-.contacts h2{
-font-size:48px;
-color:#59ff59;
-margin-bottom:30px;
-}
-
-.phone{
-font-size:40px;
-font-weight:900;
-margin-bottom:14px;
-}
-
-.nickname{
-font-size:26px;
-color:#d8ffd8;
-margin-bottom:35px;
 }
 
 .socials{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:16px;
 flex-wrap:wrap;
+margin-top:24px;
 }
 
 .social{
-width:150px;
-height:150px;
+width:130px;
+height:130px;
 background:#13213a;
 border:1px solid #315177;
-border-radius:30px;
+border-radius:28px;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-decoration:none;
-transition:.2s;
 color:white;
-font-weight:700;
-}
-
-.social:hover{
-transform:translateY(-6px);
-background:#1b3152;
+font-weight:800;
+box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
 
 .social img{
-width:60px;
-height:60px;
-margin-bottom:14px;
+width:54px;
+height:54px;
+margin-bottom:10px;
 }
 
 .max-circle{
-width:60px;
-height:60px;
+width:54px;
+height:54px;
 border-radius:50%;
 background:linear-gradient(135deg,#6557ff,#7b4dff);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:18px;
+font-size:15px;
 font-weight:900;
-margin-bottom:14px;
-}
-
-.footer{
-padding:30px;
-text-align:center;
-background:#07111d;
-color:#8ea6c3;
-font-size:18px;
-}
-
-@media(max-width:768px){
-
-h1{
-font-size:42px;
-}
-
-.subtitle{
-font-size:22px;
-}
-
-.section-title{
-font-size:34px;
-}
-
-.logo{
-width:140px;
-height:140px;
-font-size:28px;
-}
-
-.service{
-font-size:18px;
+margin-bottom:10px;
 }
 
 .phone{
 font-size:30px;
+font-weight:900;
+margin:22px 0 8px;
+}
+
+.note{
+font-size:16px;
+color:#cceccc;
+margin-top:18px;
+}
+
+.footer{
+font-size:14px;
+color:#829ab8;
+margin:28px 0 10px;
+}
+
+@media(max-width:480px){
+
+.wrapper{
+padding:12px;
+}
+
+h1{
+font-size:38px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.main-btn{
+font-size:20px;
+padding:18px;
 }
 
 .social{
-width:120px;
-height:120px;
-}
-
-.social img{
-width:44px;
-height:44px;
-}
-
-.max-circle{
-width:44px;
-height:44px;
+width:105px;
+height:105px;
+border-radius:22px;
 font-size:14px;
 }
 
+.social img,
+.max-circle{
+width:44px;
+height:44px;
 }
 
+.phone{
+font-size:25px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<div class="wrapper">
 
-<div class="logo">
-СМ
-</div>
+<img src="poster.png" class="poster" alt="СВОЙ МАСТЕР">
+
+<div class="card">
 
 <h1>СВОЙ МАСТЕР</h1>
 
 <div class="subtitle">
-Инженерные системы под ключ.<br>
+Инженерные системы под ключ<br>
 Отопление • Водоснабжение • Канализация
 </div>
 
-<div class="buttons">
-
-<a href="tel:+79244325000" class="btn green">
-📞 Позвонить
-</a>
-
-<a href="contact.vcf" class="btn dark">
+<a href="contact.vcf" class="main-btn green">
 ➕ Добавить контакт
 </a>
 
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">
-Наши услуги
-</h2>
-
-<div class="services">
-
-<div class="service">✔️ Монтаж тёплых водяных полов</div>
-<div class="service">✔️ Обвязка котельных</div>
-<div class="service">✔️ Установка электрокотлов</div>
-<div class="service">✔️ Разводка отопления</div>
-<div class="service">✔️ Монтаж водоснабжения</div>
-<div class="service">✔️ Прокладка канализации</div>
-<div class="service">✔️ Установка биосептиков</div>
-<div class="service">✔️ Ремонт санузлов под ключ</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">
-Почему выбирают нас
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Опытная бригада</h3>
-<p>
-Работаем с квартирами, коттеджами, офисами и коммерческими помещениями.
-</p>
-</div>
-
-<div class="card">
-<h3>Качество и сроки</h3>
-<p>
-Выполняем работы качественно и в оговорённый срок без постоянного контроля.
-</p>
-</div>
-
-<div class="card">
-<h3>Работаем по договору</h3>
-<p>
-Прозрачные условия, ответственность и работа на результат.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contacts">
-
-<h2>
-Связаться с нами
-</h2>
-
-<div class="phone">
-+7 924 432 5000
-</div>
-
-<div class="nickname">
-@svoj_mastervl
-</div>
+<a href="tel:+79244325000" class="main-btn dark">
+📞 Позвонить
+</a>
 
 <div class="socials">
 
@@ -380,25 +214,26 @@ WhatsApp
 </a>
 
 <a href="https://max.ru/u/f9LHodD0cOIsKAlykFAniA6p6E0nIILkuBFfusm5Wf6ZHnUYLgkHMbZXt-0" class="social">
-
-<div class="max-circle">
-MAX
-</div>
-
+<div class="max-circle">MAX</div>
 Max
-
 </a>
 
 </div>
 
-<div style="margin-top:24px;font-size:18px;color:#d8ffd8;">
+<div class="phone">
++7 924 432 5000
+</div>
+
+<div class="note">
 В Max найдите нас: @Svoj_mastervl
 </div>
 
-</section>
+</div>
 
 <div class="footer">
 © СВОЙ МАСТЕР — инженерные системы под ключ
+</div>
+
 </div>
 
 </body>
